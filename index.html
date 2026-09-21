@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="PINJARI JAFAR — Cloud / DevOps Engineer portfolio showcasing AWS, Azure, Kubernetes, Docker, CI/CD, security and monitoring projects.">
+  <meta property="og:title" content="PINJARI JAFAR | Cloud / DevOps Engineer">
+  <meta property="og:description" content="Cloud and DevOps portfolio — AWS, Azure, Kubernetes, Docker, Jenkins, Terraform, CI/CD and observability.">
+  <title>PINJARI JAFAR | Cloud / DevOps Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#060812;--panel:rgba(13,18,32,.72);--panel2:#0c1222;--text:#f5f7ff;--muted:#98a4bb;--line:rgba(255,255,255,.09);--a:#67e8f9;--b:#8b5cf6;--ok:#5eead4;--shadow:0 24px 80px rgba(0,0,0,.35)}
+    *{box-sizing:border-box;margin:0;padding:0} html{scroll-behavior:smooth} body{background:radial-gradient(circle at 15% 5%,rgba(103,232,249,.09),transparent 28%),radial-gradient(circle at 85% 15%,rgba(139,92,246,.12),transparent 30%),var(--bg);color:var(--text);font-family:Inter,system-ui,sans-serif;line-height:1.6;overflow-x:hidden}
+    body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.28;background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);background-size:48px 48px;mask-image:linear-gradient(to bottom,#000,transparent 85%);z-index:-1}
+    a{color:inherit;text-decoration:none}.container{width:min(1160px,92%);margin:auto}.nav{position:fixed;top:16px;left:50%;transform:translateX(-50%);width:min(1120px,92%);z-index:50;padding:12px 16px;border:1px solid var(--line);background:rgba(6,8,18,.68);backdrop-filter:blur(18px);border-radius:18px;display:flex;align-items:center;justify-content:space-between}.brand{font-weight:800;letter-spacing:.08em;font-size:.9rem}.brand span{color:var(--a)}.links{display:flex;gap:20px;font-size:.82rem;color:#c7d0e2}.links a:hover{color:var(--a)}.menu{display:none;background:none;border:0;color:white;font-size:1.4rem}
+    section{padding:100px 0}.hero{min-height:100vh;display:grid;place-items:center;padding-top:140px;position:relative}.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:60px;align-items:center}.eyebrow{font-family:"JetBrains Mono",monospace;color:var(--a);font-size:.8rem;letter-spacing:.13em;text-transform:uppercase;margin-bottom:18px}.hero h1{font-size:clamp(3rem,7vw,6.4rem);line-height:.94;letter-spacing:-.07em;margin-bottom:22px}.gradient{background:linear-gradient(100deg,#fff 20%,var(--a),#a78bfa 75%);-webkit-background-clip:text;background-clip:text;color:transparent}.hero p{max-width:690px;color:var(--muted);font-size:1.06rem}.actions{display:flex;gap:12px;flex-wrap:wrap;margin:30px 0}.btn{padding:12px 18px;border:1px solid var(--line);border-radius:12px;background:rgba(255,255,255,.045);font-weight:700;font-size:.88rem;transition:.25s}.btn.primary{background:linear-gradient(100deg,rgba(103,232,249,.16),rgba(139,92,246,.2));border-color:rgba(103,232,249,.35)}.btn:hover{transform:translateY(-3px);border-color:rgba(103,232,249,.55);box-shadow:0 12px 35px rgba(103,232,249,.08)}
+    .terminal{border:1px solid var(--line);border-radius:22px;background:linear-gradient(145deg,rgba(17,24,39,.86),rgba(8,12,24,.92));box-shadow:var(--shadow);overflow:hidden}.term-top{display:flex;gap:7px;padding:13px 15px;border-bottom:1px solid var(--line)}.dot{width:9px;height:9px;border-radius:50%;background:#667085}.term-body{padding:24px;font-family:"JetBrains Mono",monospace;font-size:.78rem;color:#b9c6da}.term-body .cyan{color:var(--a)}.term-body .purple{color:#c4b5fd}.term-body .green{color:var(--ok)}.line{margin:8px 0}.cursor{display:inline-block;width:7px;height:15px;background:var(--a);vertical-align:-2px;animation:blink 1s infinite}@keyframes blink{50%{opacity:0}}
+    .section-head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:38px}.kicker{color:var(--a);font-family:"JetBrains Mono",monospace;font-size:.76rem}.section-head h2{font-size:clamp(2rem,4vw,3.4rem);letter-spacing:-.045em;line-height:1.05}.section-head p{color:var(--muted);max-width:560px}
+    .glass{border:1px solid var(--line);background:var(--panel);backdrop-filter:blur(16px);border-radius:20px;box-shadow:0 16px 55px rgba(0,0,0,.16)}.about{padding:30px}.about p{color:#c1cadd;font-size:1.02rem}.about strong{color:#fff}
+    .skill-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.skill{padding:22px;transition:.25s}.skill:hover{transform:translateY(-5px);border-color:rgba(103,232,249,.22)}.skill h3{font-size:.92rem;margin-bottom:14px}.chips{display:flex;flex-wrap:wrap;gap:8px}.chip{font-family:"JetBrains Mono",monospace;font-size:.7rem;color:#b9c6da;border:1px solid var(--line);padding:6px 8px;border-radius:8px;background:rgba(255,255,255,.025)}
+    .projects{display:grid;gap:20px}.project{padding:28px;display:grid;grid-template-columns:1fr 1.1fr;gap:30px}.project .num{font-family:"JetBrains Mono",monospace;color:var(--a);font-size:.75rem}.project h3{font-size:1.7rem;margin:8px 0}.project p{color:var(--muted);font-size:.9rem}.tags{display:flex;flex-wrap:wrap;gap:7px;margin:18px 0}.tag{font-size:.68rem;padding:5px 8px;border-radius:7px;background:rgba(103,232,249,.07);color:#bdeff5;border:1px solid rgba(103,232,249,.12)}.project-links{display:flex;gap:10px;margin-top:18px}.arch{border:1px solid var(--line);border-radius:16px;padding:20px;background:#070b16}.flow{display:flex;align-items:center;gap:8px;flex-wrap:wrap;justify-content:center}.node{padding:10px 12px;border:1px solid rgba(103,232,249,.2);background:rgba(103,232,249,.04);border-radius:9px;font-family:"JetBrains Mono",monospace;font-size:.67rem;color:#d7f9fc;text-align:center}.arrow{color:#667085}.twocol{display:grid;grid-template-columns:1fr 1fr;gap:20px}.card{padding:26px}.card h3{margin-bottom:14px}.list{list-style:none;display:grid;gap:10px;color:var(--muted);font-size:.9rem}.list li:before{content:"→";color:var(--a);margin-right:9px}.timeline{border-left:1px solid rgba(103,232,249,.2);margin-left:12px;padding-left:26px;display:grid;gap:28px}.time{position:relative}.time:before{content:"";position:absolute;left:-33px;top:8px;width:11px;height:11px;border-radius:50%;background:var(--a);box-shadow:0 0 18px rgba(103,232,249,.5)}.time h3{font-size:1rem}.time p,.time span{color:var(--muted);font-size:.85rem}.certs{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.cert{padding:20px}.cert small{color:var(--a);font-family:"JetBrains Mono",monospace}.cert h3{font-size:.9rem;margin:9px 0}.cert p{color:var(--muted);font-size:.78rem}.contact{display:grid;grid-template-columns:1fr .9fr;gap:20px}.contact-card{padding:30px}.contact-card h2{font-size:2.4rem;letter-spacing:-.04em}.contact-card p{color:var(--muted);margin:12px 0 22px}.contact-links{display:grid;gap:9px}.contact-link{padding:12px 14px;border:1px solid var(--line);border-radius:10px;background:rgba(255,255,255,.025);font-size:.86rem}.contact-link:hover{border-color:rgba(103,232,249,.3)}footer{padding:35px 0;border-top:1px solid var(--line);color:#758198;font-size:.78rem;display:flex;justify-content:space-between}.reveal{opacity:0;transform:translateY(22px);transition:.7s ease}.reveal.show{opacity:1;transform:none}
+    @media(max-width:900px){.hero-grid,.project,.contact{grid-template-columns:1fr}.skill-grid{grid-template-columns:repeat(2,1fr)}.certs{grid-template-columns:repeat(2,1fr)}.links{display:none}.menu{display:block}.links.open{display:flex;position:absolute;top:62px;left:0;right:0;padding:18px;flex-direction:column;background:#090d19;border:1px solid var(--line);border-radius:14px}.section-head{display:block}.section-head p{margin-top:12px}}
+    @media(max-width:560px){section{padding:75px 0}.hero{padding-top:120px}.hero h1{font-size:3.1rem}.skill-grid,.certs,.twocol{grid-template-columns:1fr}.project{padding:20px}.flow{justify-content:flex-start}.arrow{display:none}footer{display:block}.nav{top:10px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation:none!important;transition:none!important}}
+  </style>
+</head>
+<body>
+<nav class="nav">
+  <a class="brand" href="#home">JAFAR<span>.</span></a>
+  <div class="links" id="links">
+    <a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#architecture">Architecture</a><a href="#certifications">Certifications</a><a href="#education">Education</a><a href="#contact">Contact</a>
+  </div>
+  <button class="menu" id="menu" aria-label="Open navigation">☰</button>
+</nav>
+
+<main>
+<section class="hero" id="home">
+  <div class="container hero-grid">
+    <div class="reveal">
+      <div class="eyebrow">Cloud Infrastructure · DevOps · Automation</div>
+      <h1>PINJARI <span class="gradient">JAFAR</span></h1>
+      <p>Cloud / DevOps Engineer with hands-on exposure to AWS, Azure, Linux, Git, Docker, Kubernetes, Jenkins, Terraform, GitHub Actions, Helm, Prometheus and Grafana. Focused on cloud infrastructure, 3-tier architectures, CI/CD, automation, containerization and monitoring.</p>
+      <div class="actions">
+        <a class="btn primary" href="#projects">Explore Projects ↗</a>
+        <a class="btn" href="resume.pdf" download>Download Resume ↓</a>
+        <a class="btn" href="https://github.com/Jafar151" target="_blank" rel="noopener">GitHub ↗</a>
+        <a class="btn" href="https://www.linkedin.com/in/pinjarijafar" target="_blank" rel="noopener">LinkedIn ↗</a>
+      </div>
+    </div>
+    <div class="terminal reveal">
+      <div class="term-top"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+      <div class="term-body">
+        <div class="line"><span class="cyan">$</span> whoami</div>
+        <div class="line"><span class="purple">pinjari-jafar</span></div>
+        <div class="line"><span class="cyan">$</span> stack --core</div>
+        <div class="line">AWS · Azure · Kubernetes · Docker</div>
+        <div class="line">Jenkins · Terraform · GitHub Actions</div>
+        <div class="line">Prometheus · Grafana · Linux</div>
+        <div class="line"><span class="cyan">$</span> focus</div>
+        <div class="line"><span class="green">cloud infrastructure + automation</span></div>
+        <div class="line"><span class="cyan">$</span> status</div>
+        <div class="line">building reliable cloud environments <span class="cursor"></span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+<div class="container">
+  <div class="section-head reveal"><div><div class="kicker">01 / ABOUT</div><h2>Engineering with a<br>cloud-first mindset.</h2></div><p>Practical cloud and DevOps work across infrastructure, networking, security, deployment and observability.</p></div>
+  <div class="glass about reveal"><p><strong>Cloud / DevOps Engineer</strong> and BCA graduate focused on building and deploying cloud infrastructure, 3-tier architectures and end-to-end CI/CD pipelines. My project work combines AWS and Azure fundamentals with containerization, Kubernetes, infrastructure as code, monitoring and security practices.</p></div>
+</div>
+</section>
+
+<section id="skills">
+<div class="container">
+  <div class="section-head reveal"><div><div class="kicker">02 / TOOLKIT</div><h2>Technical Stack</h2></div><p>A structured view of the technologies and platform concepts in my resume.</p></div>
+  <div class="skill-grid">
+    <div class="glass skill reveal"><h3>☁ Cloud Platforms</h3><div class="chips"><span class="chip">AWS</span><span class="chip">Microsoft Azure</span></div></div>
+    <div class="glass skill reveal"><h3>⚙ AWS</h3><div class="chips"><span class="chip">EC2</span><span class="chip">VPC</span><span class="chip">ALB</span><span class="chip">Auto Scaling</span><span class="chip">RDS MySQL</span><span class="chip">S3</span><span class="chip">IAM</span><span class="chip">CloudFront</span><span class="chip">Route 53</span><span class="chip">CloudWatch</span><span class="chip">SNS</span><span class="chip">WAF</span><span class="chip">CloudTrail</span><span class="chip">EBS</span></div></div>
+    <div class="glass skill reveal"><h3>◈ Azure</h3><div class="chips"><span class="chip">VNet</span><span class="chip">VNet Peering</span><span class="chip">NSG</span><span class="chip">Load Balancer</span><span class="chip">Application Gateway</span><span class="chip">Traffic Manager</span><span class="chip">VM</span><span class="chip">VMSS</span><span class="chip">Azure Monitor</span><span class="chip">VPN</span><span class="chip">Front Door</span><span class="chip">Logic Apps</span></div></div>
+    <div class="glass skill reveal"><h3>♢ DevOps & CI/CD</h3><div class="chips"><span class="chip">Git</span><span class="chip">GitHub</span><span class="chip">GitHub Actions</span><span class="chip">Jenkins</span><span class="chip">CI/CD</span><span class="chip">Docker</span><span class="chip">Terraform</span></div></div>
+    <div class="glass skill reveal"><h3>⎈ Kubernetes</h3><div class="chips"><span class="chip">Amazon EKS</span><span class="chip">Deployments</span><span class="chip">Services</span><span class="chip">ConfigMaps</span><span class="chip">Secrets</span><span class="chip">Ingress</span><span class="chip">HPA</span><span class="chip">Namespaces</span><span class="chip">Helm</span></div></div>
+    <div class="glass skill reveal"><h3>◉ Security & Networking</h3><div class="chips"><span class="chip">Subnetting</span><span class="chip">Route Tables</span><span class="chip">Security Groups</span><span class="chip">NACLs</span><span class="chip">NSGs</span><span class="chip">IAM</span><span class="chip">WAF</span><span class="chip">CloudTrail</span><span class="chip">VPC Flow Logs</span></div></div>
+    <div class="glass skill reveal"><h3>◌ Observability</h3><div class="chips"><span class="chip">Prometheus</span><span class="chip">Grafana</span><span class="chip">CloudWatch</span><span class="chip">CloudWatch Alarms</span><span class="chip">SNS</span><span class="chip">Azure Monitor</span><span class="chip">Log Analytics</span></div></div>
+    <div class="glass skill reveal"><h3>⌘ OS & Scripting</h3><div class="chips"><span class="chip">Linux</span><span class="chip">Ubuntu</span><span class="chip">Windows</span><span class="chip">Bash</span><span class="chip">Python</span><span class="chip">PowerShell</span></div></div>
+    <div class="glass skill reveal"><h3>▣ Web & Data</h3><div class="chips"><span class="chip">Nginx</span><span class="chip">Apache Tomcat</span><span class="chip">MySQL</span></div></div>
+  </div>
+</div>
+</section>
+
+<section id="projects">
+<div class="container">
+  <div class="section-head reveal"><div><div class="kicker">03 / PROJECTS</div><h2>Built, deployed,<br>and monitored.</h2></div><p>Project case studies based on the implementations documented in my resume.</p></div>
+  <div class="projects">
+    <article class="glass project reveal">
+      <div><div class="num">PROJECT / 01</div><h3>Three-Tier Architecture</h3><p>High-availability AWS architecture across two Availability Zones, separating Web, Application and Database layers using public and private subnets.</p><div class="tags"><span class="tag">AWS</span><span class="tag">EC2</span><span class="tag">ALB</span><span class="tag">Auto Scaling</span><span class="tag">RDS MySQL</span><span class="tag">WAF</span><span class="tag">CloudWatch</span></div><div class="project-links"><a class="btn primary" href="https://github.com/Jafar151/three-tier-architecture" target="_blank" rel="noopener">GitHub ↗</a></div></div>
+      <div class="arch"><div class="flow"><span class="node">Internet</span><span class="arrow">→</span><span class="node">WAF</span><span class="arrow">→</span><span class="node">Public ALB</span><span class="arrow">→</span><span class="node">Web Tier</span><span class="arrow">→</span><span class="node">Internal ALB</span><span class="arrow">→</span><span class="node">App Tier</span><span class="arrow">→</span><span class="node">RDS MySQL</span></div></div>
+    </article>
+    <article class="glass project reveal">
+      <div><div class="num">PROJECT / 02</div><h3>End-to-End DevOps CI/CD Pipeline</h3><p>Automated source checkout, application build, quality analysis, security scanning, Docker image creation and deployment to AWS EKS.</p><div class="tags"><span class="tag">GitHub</span><span class="tag">Jenkins</span><span class="tag">SonarQube</span><span class="tag">OWASP</span><span class="tag">Trivy</span><span class="tag">Docker</span><span class="tag">EKS</span><span class="tag">Prometheus</span><span class="tag">Grafana</span></div><div class="project-links"><a class="btn primary" href="https://github.com/Jafar151/End-to-End-DevOps-CI-CD-Pipeline" target="_blank" rel="noopener">GitHub ↗</a></div></div>
+      <div class="arch"><div class="flow"><span class="node">GitHub</span><span class="arrow">→</span><span class="node">Jenkins</span><span class="arrow">→</span><span class="node">SonarQube</span><span class="arrow">→</span><span class="node">Security Scan</span><span class="arrow">→</span><span class="node">Docker</span><span class="arrow">→</span><span class="node">Docker Hub</span><span class="arrow">→</span><span class="node">AWS EKS</span><span class="arrow">→</span><span class="node">Monitoring</span></div></div>
+    </article>
+    <article class="glass project reveal">
+      <div><div class="num">PROJECT / 03</div><h3>Air Quality Monitoring Through Mobiles and Stations</h3><p>Web-based AQI monitoring system aggregating pollutant data from public APIs, IoT sensors and monitoring stations, with location-aware search, charts and AQI forecasting.</p><div class="tags"><span class="tag">Python</span><span class="tag">React / JS</span><span class="tag">Flask / Django</span><span class="tag">Scikit-learn / TensorFlow</span><span class="tag">MySQL</span><span class="tag">MongoDB</span><span class="tag">Firebase</span></div><div class="project-links"><a class="btn primary" href="https://github.com/Jafar151/air-quality-monitoring-through-mobiles-and-stations" target="_blank" rel="noopener">GitHub ↗</a></div></div>
+      <div class="arch"><div class="flow"><span class="node">APIs / Sensors</span><span class="arrow">→</span><span class="node">Data Normalization</span><span class="arrow">→</span><span class="node">AQI</span><span class="arrow">→</span><span class="node">Prediction</span><span class="arrow">→</span><span class="node">Dashboard</span><span class="arrow">→</span><span class="node">Alerts</span></div></div>
+    </article>
+  </div>
+</div>
+</section>
+
+<section id="architecture">
+<div class="container">
+  <div class="section-head reveal"><div><div class="kicker">04 / ARCHITECTURE LAB</div><h2>Infrastructure,<br>made visible.</h2></div><p>Interactive-style diagrams translating the portfolio's main cloud and DevOps flows into recruiter-friendly visuals.</p></div>
+  <div class="twocol">
+    <div class="glass card reveal"><h3>AWS Three-Tier Flow</h3><div class="flow"><span class="node">Route 53</span><span class="arrow">→</span><span class="node">WAF</span><span class="arrow">→</span><span class="node">ALB</span><span class="arrow">→</span><span class="node">Nginx</span><span class="arrow">→</span><span class="node">Internal ALB</span><span class="arrow">→</span><span class="node">Tomcat</span><span class="arrow">→</span><span class="node">RDS</span></div></div>
+    <div class="glass card reveal"><h3>CI/CD Flow</h3><div class="flow"><span class="node">GitHub</span><span class="arrow">→</span><span class="node">Jenkins</span><span class="arrow">→</span><span class="node">Quality</span><span class="arrow">→</span><span class="node">Security</span><span class="arrow">→</span><span class="node">Docker</span><span class="arrow">→</span><span class="node">EKS</span><span class="arrow">→</span><span class="node">Grafana</span></div></div>
+  </div>
+  <div class="twocol" style="margin-top:20px">
+    <div class="glass card reveal"><h3>Security Layer</h3><ul class="list"><li>IAM least-privilege roles</li><li>Security Groups and NACLs</li><li>Private subnets</li><li>WAF protection</li><li>VPC Flow Logs</li><li>CloudTrail auditing</li><li>Systems Manager for keyless EC2 administration</li></ul></div>
+    <div class="glass card reveal"><h3>Observability Layer</h3><ul class="list"><li>CloudWatch infrastructure monitoring</li><li>CloudWatch Alarms</li><li>SNS notifications</li><li>Prometheus metrics</li><li>Grafana dashboards</li><li>Azure Monitor</li><li>Log Analytics</li></ul></div>
+  </div>
+</div>
+</section>
+
+<section id="certifications">
+<div class="container">
+  <div class="section-head reveal"><div><div class="kicker">05 / CERTIFICATIONS</div><h2>Learning foundation.</h2></div></div>
+  <div class="certs">
+    <div class="glass cert reveal"><small>IBM · COURSERA</small><h3>Introduction to Cloud Computing</h3><p>Cloud fundamentals</p></div>
+    <div class="glass cert reveal"><small>DUKE UNIVERSITY · COURSERA</small><h3>Cloud Virtualization, Containers and APIs</h3><p>Cloud and container concepts</p></div>
+    <div class="glass cert reveal"><small>IBM · COURSERA</small><h3>Introduction to Networking and Storage</h3><p>Networking and storage fundamentals</p></div>
+    <div class="glass cert reveal"><small>META</small><h3>Version Control</h3><p>Version control fundamentals</p></div>
+  </div>
+</div>
+</section>
+
+<section id="education">
+<div class="container">
+  <div class="section-head reveal"><div><div class="kicker">06 / EDUCATION</div><h2>Academic journey.</h2></div></div>
+  <div class="glass card timeline reveal">
+    <div class="time"><h3>Bachelor of Computer Applications (BCA)</h3><p>Mohan Babu University · 2025 · CGPA 8.43 / 10</p></div>
+    <div class="time"><h3>Intermediate (12th)</h3><p>Sri Chaitanya Jr. College · 2020 · CGPA 9.19 / 10</p></div>
+    <div class="time"><h3>Secondary School (10th)</h3><p>Narayana English Medium High School · 2018 · CGPA 9.5 / 10</p></div>
+  </div>
+</div>
+</section>
+
+<section id="contact">
+<div class="container">
+  <div class="section-head reveal"><div><div class="kicker">07 / CONTACT</div><h2>Let's connect.</h2></div><p>Open to conversations around Cloud and DevOps opportunities, projects and technical collaboration.</p></div>
+  <div class="contact">
+    <div class="glass contact-card reveal"><h2>Build something<br><span class="gradient">reliable.</span></h2><p>For professional opportunities or project discussions, reach out through the links below.</p><div class="contact-links"><a class="contact-link" href="mailto:pinjarijafar123@gmail.com">✉ pinjarijafar123@gmail.com</a><a class="contact-link" href="https://www.linkedin.com/in/pinjarijafar" target="_blank" rel="noopener">in LinkedIn</a><a class="contact-link" href="https://github.com/Jafar151" target="_blank" rel="noopener">⌘ github.com/Jafar151</a></div></div>
+    <div class="glass contact-card reveal"><div class="eyebrow">CURRENT FOCUS</div><h3>Cloud Infrastructure<br>DevOps Automation<br>Containerized Delivery<br>Monitoring & Observability</h3><div class="actions"><a class="btn primary" href="mailto:pinjarijafar123@gmail.com">Email Me ↗</a><a class="btn" href="resume.pdf" download>Resume ↓</a></div></div>
+  </div>
+</div>
+</section>
+</main>
+
+<footer class="container"><span>© 2026 PINJARI JAFAR · Cloud / DevOps Engineer</span><span>AWS · Azure · DevOps</span></footer>
+<script>
+const menu=document.getElementById('menu'), links=document.getElementById('links');
+menu.addEventListener('click',()=>links.classList.toggle('open'));
+links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>links.classList.remove('open')));
+const io=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')}),{threshold:.08});
+document.querySelectorAll('.reveal').forEach(e=>io.observe(e));
+</script>
+</body>
+</html>
